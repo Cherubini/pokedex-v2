@@ -1,5 +1,9 @@
 .list-img{
+<<<<<<< HEAD
     width: 80pxpx;
+=======
+    width: 50px;
+>>>>>>> 6e2baf46c1bf941f68417550c873bf12b4cad8e8
 }
 
 summary{
@@ -9,11 +13,19 @@ summary{
 
 details{
     width: 96%;
+<<<<<<< HEAD
     margin:auto;
     border:1px solid grey;
     padding: 4px;
     border-radius: 4px;
     margin: 5px;
+=======
+    margin: auto;
+    border: 1px solid #313131;
+    padding: 4px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+>>>>>>> 6e2baf46c1bf941f68417550c873bf12b4cad8e8
 }
 
 .spacer{
@@ -21,7 +33,11 @@ details{
 }
 
 .type{
+<<<<<<< HEAD
     padding: 4px;
+=======
+    padding: 2px;
+>>>>>>> 6e2baf46c1bf941f68417550c873bf12b4cad8e8
     margin: 2px;
     border: 1px red solid;
     border-radius: 4px;
