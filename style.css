@@ -1,19 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/* font-family: 'Press Start 2P', cursive;*/
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    
+    background-color: red;
+}
+
+.title{
+    height:  20vh;
+    display: flex;
+    justify-content: center;
+}
+
+.title-img{
+    height: 100%;
+}
+
+.button-container{
+    margin: 10px;
+}
+
+#pokemon-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .list-img{
-    width: 50px;
+    width: 80%;
+
 }
 
 summary{
     display: flex;
     align-items: center;
+    padding: 5px;
+    flex-direction: column;
 }
 
 details{
-    width: 96%;
-    margin: auto;
-    border: 1px solid #313131;
+    width: 250px;
+    min-height: 350px;
+    height: auto;
     padding: 4px;
     border-radius: 4px;
-    margin-bottom: 2px;
+    margin: 5px;
+    border: 1px solid #313131;
+    background-color: rgb(221, 221, 221);
+    font-family: 'Press Start 2P', cursive;
 }
 
 .spacer{
@@ -21,8 +59,110 @@ details{
 }
 
 .type{
+    padding: 5px;
+    padding: 4px;
     padding: 2px;
     margin: 2px;
-    border: 1px red solid;
     border-radius: 4px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.button-nav{
+    padding: 10px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgb(115, 190, 255);
+    border-radius:  5px;
+    border: 0;
+    color: rgb(34, 34, 34);
+    font-weight: lighter;
+}
+
+
+.normal{
+    background-color: rgb(173, 175, 160);
+}
+
+.poison{
+    background-color:rgb(162, 88, 146);
+}
+
+.psychic{
+    background-color: rgb(220, 86, 148);
+}
+
+.grass{
+    background-color:rgb(123, 187, 88);
+}
+
+.ground{
+    background-color: rgb(214, 185, 96);
+}
+
+.ice{
+    background-color: rgb(128, 221, 250);
+}
+
+.fire{
+    background-color: rgb(233, 74, 65);
+}
+
+.rock{
+    background-color: rgb(187, 172, 112);
+}
+
+.dragon{
+    background-color: rgb(115, 102, 199);
+}
+
+.water{
+    background-color: rgb(66, 159, 245);
+}
+
+.bug{
+    background-color: rgb(176, 188, 64);
+}
+    
+.dark{
+    background-color: rgb(129, 96, 79);
+}
+  
+.fighting{
+    background-color: rgb(171, 88, 73);
+}
+  
+.ghost{
+    background-color: rgb(109, 109, 188);
+}
+  
+.steel{
+    background-color: rgb(178, 179, 197);
+}
+  
+.flying{
+    background-color: rgb(109, 151, 241);
+}
+  
+.electric{
+    background-color: rgb(246, 208, 81);
+}
+  
+.fairy{
+    background-color: rgb(222, 161, 219);
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    
+details{
+    width: 96%;
+    margin: auto;
+    border: 1px solid #313131;
+    padding: 4px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    background-color: rgb(221, 221, 221);
+    font-family: 'Press Start 2P', cursive;
+}
 }
