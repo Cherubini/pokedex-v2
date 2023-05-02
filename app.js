@@ -21,10 +21,6 @@ function getPreviousPage() {
         actualPageIndex= Pokeservice.PAGE_COUNT - 1;
     PokeService.getPage(actualPageIndex).then(pokemons =>{
         displayPokemons(pokemons)})
-    actualPageindex--;
-    PokeService.getPage(actualPageindex).then(pokemons => {
-        displayPokemons(pokemons);
-    })
 }
 
 function displayPokemons(pokemons){
@@ -34,7 +30,8 @@ function displayPokemons(pokemons){
 
 
     for (const pokemon of pokemons) {
-
+        console.log(pokemon);
+        console.log(pokemon.description);
         pokemonContainer.innerHTML+=
         `
         <details>
@@ -48,7 +45,7 @@ function displayPokemons(pokemons){
             <ul>
                 ${createAbilitiesList(pokemon)}
             </ul>
-                ${console.log(getPokemonHistory(pokemon))}
+                ${pokemon.description}
             <p class='stats'> ${createStatisticList(pokemon)} </p>
         </div>
     </details>

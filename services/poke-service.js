@@ -19,17 +19,27 @@ class PokeService{
         for (const pokemon of pokemonNames) {
             const name = pokemon.name;
             const url = this.BASE_URL + 'pokemon/' + name;
-            const request = fetch(url).then(resp => resp.json());
+            const request = fetch(url).then(resp => resp.json()).then(pokemon => {
+                console.log('pap2');
+                this.getSpecies(pokemon);
+                return pokemon;
+            });
             requests.push(request);
         }
         return Promise.all(requests);
     }
 
-    static getSpecies(pokemonSpecies) {
-        const url = pokemonSpecies; 
-        return fetch(url)
-        .then(resp => resp.json());
+    static getSpecies(pokemon)
+    {
+        console.log('pippo')
+        const url = pokemon.species.url;
+        fetch(url).then(resp=>resp.json()).then(specie=>{
+            console.log('pippo2')
+            pokemon.description=specie.flavor_text_entries[0].flavor_text
+        });
+        return pokemon
     }
+
 
 
 }
