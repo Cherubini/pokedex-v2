@@ -54,6 +54,11 @@ details{
     font-family: 'Press Start 2P', cursive;
 }
 
+.stats{
+    font-size: small;
+    margin: 10px;
+}
+
 .spacer{
     flex-grow: 1;
 }

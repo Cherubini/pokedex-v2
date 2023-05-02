@@ -28,4 +28,10 @@ class Pokeservice{
         return Promise.all(requests);
     }
 
+    static getSpecies(pokemonUrl)
+    {
+        return fetch(pokemonUrl).then(resp=resp.json())
+    }
+
+
 }
