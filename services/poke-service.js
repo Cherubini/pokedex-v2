@@ -20,7 +20,6 @@ class PokeService{
             const name = pokemon.name;
             const url = this.BASE_URL + 'pokemon/' + name;
             const request = fetch(url).then(resp => resp.json()).then(pokemon => {
-                console.log('pap2');
                 this.getSpecies(pokemon);
                 return pokemon;
             });
@@ -31,10 +30,8 @@ class PokeService{
 
     static getSpecies(pokemon)
     {
-        console.log('pippo')
         const url = pokemon.species.url;
         fetch(url).then(resp=>resp.json()).then(specie=>{
-            console.log('pippo2')
             pokemon.description=specie.flavor_text_entries[0].flavor_text
         });
         return pokemon
