@@ -16,13 +16,19 @@ class PokeService{
 
     static getDetails(pokemonNames) {
         const requests = [];
+        console.log(pokemonNames);
         for (const pokemon of pokemonNames) {
+            console.log(pokemon);
             const name = pokemon.name;
             const url = this.BASE_URL + 'pokemon/' + name;
-            const request = fetch(url).then(resp => resp.json()).then(pokemon => {
-                this.getSpecies(pokemon);
-                return pokemon;
-            });
+            const request = fetch(url)
+                .then(resp => resp.json())
+                .then(pokemon => {
+                    console.log('poke' ,pokemon);
+                    this.getSpecies(pokemon);
+                    return pokemon;
+                });
+            console.log('descr ' ,pokemon.description);
             requests.push(request);
         }
         return Promise.all(requests);
@@ -34,7 +40,7 @@ class PokeService{
         fetch(url).then(resp=>resp.json()).then(specie=>{
             pokemon.description=specie.flavor_text_entries[0].flavor_text
         });
-        return pokemon
+        //return pokemon
     }
 
 

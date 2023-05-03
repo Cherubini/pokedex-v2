@@ -30,8 +30,9 @@ function displayPokemons(pokemons){
 
 
     for (const pokemon of pokemons) {
-        console.log(pokemon);
-        console.log(pokemon.description);
+        //console.log(pokemon);
+        
+        //console.log('descrizione', pokemon.description);
         pokemonContainer.innerHTML+=
         `
         <details>
