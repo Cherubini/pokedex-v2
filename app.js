@@ -24,7 +24,7 @@ function getPreviousPage() {
 }
 
 function displayPokemons(pokemons){
-
+console.log('pokemons',pokemons);
     const pokemonContainer= document.getElementById('pokemon-container');
     pokemonContainer.innerHTML='';
 
